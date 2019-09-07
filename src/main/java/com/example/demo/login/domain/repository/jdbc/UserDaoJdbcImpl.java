@@ -112,7 +112,31 @@ public class UserDaoJdbcImpl implements UserDao {
     // Userテーブルを１件更新.
     @Override
     public int updateOne(User user) throws DataAccessException {
-        return 0;
+        
+        //１件更新
+        int rowNumber = jdbc.update("UPDATE M_USER"
+                + " SET"
+                + " password = ?,"
+                + " user_name = ?,"
+                + " birthday = ?,"
+                + " age = ?,"
+                + " marriage = ?"
+                + " WHERE user_id = ?",
+                user.getPassword(),
+                user.getUserName(),
+                user.getBirthday(),
+                user.getAge(),
+                user.isMarriage(),
+                user.getUserId());
+
+        //トランザクション確認のため、わざと例外をthrowする
+        //        if (rowNumber > 0) {
+        //            throw new DataAccessException("トランザクションテスト") {
+        //            };
+        //        }
+
+        return rowNumber;
+        
     }
 
     // Userテーブルを１件削除.
