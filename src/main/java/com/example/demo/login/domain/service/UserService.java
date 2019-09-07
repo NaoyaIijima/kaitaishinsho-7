@@ -13,7 +13,7 @@ import org.springframework.stereotype.Service;
 public class UserService {
 
     @Autowired
-    @Qualifier("UserDaoJdbcImpl3")
+    @Qualifier("UserDaoJdbcImpl4")
     UserDao dao;
     
     /**
