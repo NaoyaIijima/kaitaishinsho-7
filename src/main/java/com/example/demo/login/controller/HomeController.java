@@ -1,21 +1,40 @@
 package com.example.demo.login.controller;
 
+import java.util.LinkedHashMap;
+import java.util.List;
+import java.util.Map;
+
+import com.example.demo.login.domain.model.User;
+import com.example.demo.login.domain.service.UserService;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 
-import java.util.List;
-
-import com.example.demo.login.domain.model.User;
-import com.example.demo.login.domain.service.UserService;
-
 @Controller
 public class HomeController {
 
     @Autowired
     UserService userService;
+    
+    // 結婚ステータスのラジオボタン用変数
+    private Map<String, String> radioMarriage;
+
+    /**
+     * ラジオボタンの初期化メソッド（ユーザー登録画面と同じ）.
+     */
+    private Map<String, String> initRadioMarrige() {
+
+        Map<String, String> radio = new LinkedHashMap<>();
+
+        // 既婚、未婚をMapに格納
+        radio.put("既婚", "true");
+        radio.put("未婚", "false");
+
+        return radio;
+    }
 
     /**
      * ホーム画面のGET用メソッド
@@ -50,6 +69,9 @@ public class HomeController {
 
         return "login/homeLayout";
     }
+    
+    
+    
 
     //ログアウト用メソッド.
     @PostMapping("/logout")
