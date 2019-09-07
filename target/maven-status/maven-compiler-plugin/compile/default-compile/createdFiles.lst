@@ -1,13 +1,16 @@
 com/example/demo/login/domain/repository/jdbc/UserDaoJdbcImpl.class
 com/example/demo/login/controller/LoginController.class
+com/example/demo/login/domain/repository/jdbc/UserResultSetExtractor.class
 com/example/demo/login/domain/repository/UserDao.class
 com/example/demo/login/aspect/LogAspect.class
 com/example/demo/login/domain/model/User.class
 com/example/demo/DemoApplication.class
 com/example/demo/login/domain/model/ValidGroup1.class
+com/example/demo/login/domain/repository/jdbc/UserRowCallbackHandler.class
 com/example/demo/login/domain/repository/jdbc/UserDaoJdbcImpl3.class
 com/example/demo/login/domain/service/UserService.class
 com/example/demo/login/domain/repository/jdbc/UserRowMapper.class
+com/example/demo/login/domain/repository/jdbc/UserDaoJdbcImpl4.class
 com/example/demo/login/domain/model/ValidGroup3.class
 com/example/demo/WebConfig.class
 com/example/demo/login/domain/model/SignupForm.class
