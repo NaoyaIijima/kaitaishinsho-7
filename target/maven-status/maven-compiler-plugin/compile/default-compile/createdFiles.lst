@@ -3,6 +3,7 @@ com/example/demo/login/controller/LoginController.class
 com/example/demo/login/domain/repository/jdbc/UserResultSetExtractor.class
 com/example/demo/login/domain/repository/UserDao.class
 com/example/demo/login/aspect/LogAspect.class
+com/example/demo/login/domain/repository/jdbc/UserDaoNamedJdbcImpl.class
 com/example/demo/login/domain/model/User.class
 com/example/demo/DemoApplication.class
 com/example/demo/login/domain/model/ValidGroup1.class

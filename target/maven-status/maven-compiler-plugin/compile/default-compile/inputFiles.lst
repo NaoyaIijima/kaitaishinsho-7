@@ -13,6 +13,7 @@
 /projects/NaoyaIijima-kaitaishinsho-7/src/main/java/com/example/demo/login/domain/model/ValidGroup3.java
 /projects/NaoyaIijima-kaitaishinsho-7/src/main/java/com/example/demo/login/controller/LoginController.java
 /projects/NaoyaIijima-kaitaishinsho-7/src/main/java/com/example/demo/login/domain/repository/jdbc/UserResultSetExtractor.java
+/projects/NaoyaIijima-kaitaishinsho-7/src/main/java/com/example/demo/login/domain/repository/jdbc/UserDaoNamedJdbcImpl.java
 /projects/NaoyaIijima-kaitaishinsho-7/src/main/java/com/example/demo/login/domain/model/User.java
 /projects/NaoyaIijima-kaitaishinsho-7/src/main/java/com/example/demo/DemoApplication.java
 /projects/NaoyaIijima-kaitaishinsho-7/src/main/java/com/example/demo/login/domain/model/ValidGroup1.java
