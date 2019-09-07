@@ -69,9 +69,6 @@ public class HomeController {
 
         return "login/homeLayout";
     }
-    
-    
-    
 
     //ログアウト用メソッド.
     @PostMapping("/logout")
