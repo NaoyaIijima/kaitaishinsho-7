@@ -7,6 +7,7 @@
 /projects/NaoyaIijima-kaitaishinsho-7/src/main/java/com/example/demo/login/domain/repository/jdbc/UserRowMapper.java
 /projects/NaoyaIijima-kaitaishinsho-7/src/main/java/com/example/demo/login/controller/SignupController.java
 /projects/NaoyaIijima-kaitaishinsho-7/src/main/java/com/example/demo/login/domain/repository/jdbc/UserDaoJdbcImpl.java
+/projects/NaoyaIijima-kaitaishinsho-7/src/main/java/com/example/demo/login/domain/repository/jdbc/UserDaoJdbcImpl3.java
 /projects/NaoyaIijima-kaitaishinsho-7/src/main/java/com/example/demo/login/domain/model/ValidGroup3.java
 /projects/NaoyaIijima-kaitaishinsho-7/src/main/java/com/example/demo/login/controller/LoginController.java
 /projects/NaoyaIijima-kaitaishinsho-7/src/main/java/com/example/demo/login/domain/model/User.java

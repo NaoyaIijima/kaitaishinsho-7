@@ -5,6 +5,7 @@ com/example/demo/login/aspect/LogAspect.class
 com/example/demo/login/domain/model/User.class
 com/example/demo/DemoApplication.class
 com/example/demo/login/domain/model/ValidGroup1.class
+com/example/demo/login/domain/repository/jdbc/UserDaoJdbcImpl3.class
 com/example/demo/login/domain/service/UserService.class
 com/example/demo/login/domain/repository/jdbc/UserRowMapper.class
 com/example/demo/login/domain/model/ValidGroup3.class
