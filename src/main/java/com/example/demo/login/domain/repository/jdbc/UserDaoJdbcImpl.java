@@ -57,7 +57,24 @@ public class UserDaoJdbcImpl implements UserDao {
     // Userテーブルのデータを１件取得
     @Override
     public User selectOne(String userId) throws DataAccessException {
-        return null;
+
+        // １件取得
+        Map<String, Object> map = jdbc.queryForMap("SELECT * FROM m_user"
+                + " WHERE user_id = ?", userId);
+
+        // 結果返却用の変数
+        User user = new User();
+
+        // 取得したデータを結果返却用の変数にセットしていく
+        user.setUserId((String) map.get("user_id")); //ユーザーID
+        user.setPassword((String) map.get("password")); //パスワード
+        user.setUserName((String) map.get("user_name")); //ユーザー名
+        user.setBirthday((Date) map.get("birthday")); //誕生日
+        user.setAge((Integer) map.get("age")); //年齢
+        user.setMarriage((Boolean) map.get("marriage")); //結婚ステータス
+        user.setRole((String) map.get("role")); //ロール
+
+        return user;
     }
 
     // Userテーブルの全データを取得.
@@ -95,13 +112,41 @@ public class UserDaoJdbcImpl implements UserDao {
     // Userテーブルを１件更新.
     @Override
     public int updateOne(User user) throws DataAccessException {
-        return 0;
+        
+        //１件更新
+        int rowNumber = jdbc.update("UPDATE M_USER"
+                + " SET"
+                + " password = ?,"
+                + " user_name = ?,"
+                + " birthday = ?,"
+                + " age = ?,"
+                + " marriage = ?"
+                + " WHERE user_id = ?",
+                user.getPassword(),
+                user.getUserName(),
+                user.getBirthday(),
+                user.getAge(),
+                user.isMarriage(),
+                user.getUserId());
+
+        //トランザクション確認のため、わざと例外をthrowする
+        //        if (rowNumber > 0) {
+        //            throw new DataAccessException("トランザクションテスト") {
+        //            };
+        //        }
+
+        return rowNumber;
+        
     }
 
     // Userテーブルを１件削除.
     @Override
     public int deleteOne(String userId) throws DataAccessException {
-        return 0;
+        
+        int rowNumber = jdbc.update("DELETE FROM m_user WHERE user_id = ?", userId);
+        
+        return rowNumber;
+        
     }
 
     // SQL取得結果をサーバーにCSVで保存する
